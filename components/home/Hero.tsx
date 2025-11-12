@@ -4,7 +4,7 @@ import { FaArrowRight, FaCheckCircle } from 'react-icons/fa'
 const Hero = () => {
   return (
     <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
-      {/* Background Pattern */}
+      {/* Background Pattern - resembling building lights */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
@@ -15,9 +15,9 @@ const Hero = () => {
       <div className="container-custom relative z-10 py-16 md:py-24 lg:py-32">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-            <FaCheckCircle className="text-accent" />
-            <span className="text-sm font-semibold">Egypt's Trusted Digital Partner</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full mb-6 border border-accent/30">
+            <span className="text-2xl">💡</span>
+            <span className="text-sm font-semibold text-accent">Fikra - Bright Ideas, Bold Solutions</span>
           </div>
 
           {/* Headline */}
@@ -50,18 +50,18 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* CTAs */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-accent text-white rounded-lg font-semibold hover:bg-accent-dark transition-all shadow-lg hover:shadow-xl touch-target"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-gold text-primary rounded-lg font-bold hover:shadow-2xl hover:scale-105 transition-all shadow-lg touch-target"
             >
               Get Free Consultation
               <FaArrowRight className="ml-2" />
             </Link>
             <Link 
               href="/portfolio"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/20 touch-target"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all border border-accent/50 touch-target"
             >
               View Our Work
             </Link>

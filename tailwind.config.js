@@ -9,14 +9,19 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0066FF',
-          dark: '#0052CC',
-          light: '#4D94FF',
+          DEFAULT: '#0A0E27', // Deep navy from Fikra logo
+          dark: '#050711',
+          light: '#1A1E3F',
         },
         accent: {
-          DEFAULT: '#FF6B35',
-          dark: '#E55A2B',
-          light: '#FF8A5C',
+          DEFAULT: '#F5C518', // Yellow from lightbulb and building lights
+          dark: '#D4A817',
+          light: '#FFD93D',
+        },
+        gold: {
+          DEFAULT: '#FFA500', // Warm amber/orange glow
+          dark: '#E59400',
+          light: '#FFB733',
         },
         success: '#28A745',
         warning: '#FFC107',
