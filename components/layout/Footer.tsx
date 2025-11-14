@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   FaFacebookF, 
   FaLinkedinIn, 
@@ -19,10 +20,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-2xl">💡</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <Image 
+                src="/fikra-logo.png" 
+                alt="Fikra Agency Logo" 
+                width={40} 
+                height={40}
+                className="w-10 h-10"
+              />
               <span className="font-bold text-lg text-white">
                 Fikra<span className="text-accent"> Agency</span>
               </span>

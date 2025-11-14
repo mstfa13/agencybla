@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 import MobileNav from './MobileNav'
 
@@ -14,10 +15,15 @@ const Header = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-accent font-bold text-2xl">💡</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-3">
+              <Image 
+                src="/fikra-logo.png" 
+                alt="Fikra Agency Logo" 
+                width={50} 
+                height={50}
+                className="w-12 h-12 md:w-14 md:h-14"
+                priority
+              />
               <span className="font-bold text-lg md:text-xl text-primary">
                 Fikra<span className="text-accent"> Agency</span>
               </span>
