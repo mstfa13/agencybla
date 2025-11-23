@@ -12,11 +12,42 @@ export default function ContactPage() {
     service: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    alert('Thank you for your message! We will get back to you within 24 hours.')
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbx5wfIHBNKGs3QkixnR6hxMobgXsp5Sz-fNk-FKOleENnboDhBNyAYnxU1WZQT_fi1ipA/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType: 'Contact Form'
+        })
+      })
+
+      setSubmitStatus('success')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
+      alert('Thank you for your message! We will get back to you within 24 hours.')
+    } catch (error) {
+      setSubmitStatus('error')
+      alert('There was an error submitting your form. Please try again or contact us directly via WhatsApp.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -134,10 +165,17 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all shadow-lg"
+                    disabled={isSubmitting}
+                    className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+                  {submitStatus === 'success' && (
+                    <p className="text-green-600 text-sm mt-2">Message sent successfully!</p>
+                  )}
+                  {submitStatus === 'error' && (
+                    <p className="text-red-600 text-sm mt-2">Failed to send. Please try again.</p>
+                  )}
                 </form>
               </div>
             </div>
