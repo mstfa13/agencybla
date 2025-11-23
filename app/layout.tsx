@@ -9,8 +9,11 @@ export const metadata: Metadata = {
   description: 'Leading digital solutions agency in Egypt. We build custom websites, mobile apps, and automation solutions for businesses. Get your free quote today!',
   keywords: 'web development egypt, mobile app development cairo, digital agency egypt, website design egypt, software development egypt',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: [
+      { url: '/fikra-logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/fikra-logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/fikra-logo.png',
     apple: '/fikra-logo.png',
   },
   openGraph: {
