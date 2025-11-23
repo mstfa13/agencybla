@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer'
 import StickyBottomBar from '@/components/layout/StickyBottomBar'
 
 export const metadata: Metadata = {
-  title: 'Digital Solutions Agency Egypt | Web & Mobile Development',
+  title: 'FikraX | Digital Solutions Agency Egypt',
   description: 'Leading digital solutions agency in Egypt. We build custom websites, mobile apps, and automation solutions for businesses. Get your free quote today!',
   keywords: 'web development egypt, mobile app development cairo, digital agency egypt, website design egypt, software development egypt',
   openGraph: {
