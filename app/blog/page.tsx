@@ -21,7 +21,7 @@ const blogPosts = [
     featured: true
   },
   {
-    id: 'mobile-app-costs-egypt',
+    id: 'app-development-costs-egypt',
     title: 'Mobile App Development Costs in Egypt: Complete Breakdown 2024',
     excerpt: 'Detailed pricing guide for iOS and Android app development in Egypt. Understand what affects costs and how to budget for your mobile app project.',
     category: 'Mobile Apps',
@@ -31,7 +31,7 @@ const blogPosts = [
     image: '📱'
   },
   {
-    id: 'business-automation-benefits',
+    id: 'business-automation-egypt',
     title: '10 Business Processes You Should Automate in Egypt',
     excerpt: 'Discover which business processes are worth automating and how automation can save time and reduce costs for Egyptian businesses.',
     category: 'Automation',
@@ -69,6 +69,16 @@ const blogPosts = [
     date: 'Jan 3, 2024',
     readTime: '12 min read',
     image: '☁️'
+  },
+  {
+    id: 'do-egyptian-businesses-need-websites',
+    title: 'Do Egyptian Businesses Need Websites Now?',
+    excerpt: 'Why every Egyptian business needs a website in 2024. Digital transformation trends, consumer behavior analysis, and ROI examples.',
+    category: 'Web Development',
+    author: 'Mohamed Ali',
+    date: 'Jan 5, 2024',
+    readTime: '8 min read',
+    image: '🌐'
   }
 ]
 
