@@ -14,6 +14,7 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -34,6 +35,7 @@ export default function ContactPage() {
       })
 
       setSubmitStatus('success')
+      setShowSuccessModal(true)
       setFormData({
         name: '',
         email: '',
@@ -41,7 +43,6 @@ export default function ContactPage() {
         service: '',
         message: ''
       })
-      alert('Thank you for your message! We will get back to you within 24 hours.')
     } catch (error) {
       setSubmitStatus('error')
       alert('There was an error submitting your form. Please try again or contact us directly via WhatsApp.')
@@ -56,6 +57,31 @@ export default function ContactPage() {
 
   return (
     <>
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform animate-scaleIn">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">Message Sent Successfully!</h3>
+              <p className="text-gray-600 mb-6">
+                Thank you for reaching out! We've received your message and will get back to you within 24 hours.
+              </p>
+              <button
+                onClick={() => setShowSuccessModal(false)}
+                className="px-8 py-3 bg-gradient-to-r from-accent to-gold text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white py-16 md:py-24">
         <div className="container-custom text-center">
           <h1 className="mb-6">Get In Touch</h1>
@@ -170,12 +196,6 @@ export default function ContactPage() {
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
-                  {submitStatus === 'success' && (
-                    <p className="text-green-600 text-sm mt-2">Message sent successfully!</p>
-                  )}
-                  {submitStatus === 'error' && (
-                    <p className="text-red-600 text-sm mt-2">Failed to send. Please try again.</p>
-                  )}
                 </form>
               </div>
             </div>
