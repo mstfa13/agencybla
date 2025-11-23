@@ -2,46 +2,61 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 
-const categories = ['All', 'E-commerce', 'Mobile Apps', 'Corporate', 'Automation']
+const categories = ['All', 'Websites', 'Mobile Apps', 'E-commerce']
 
 const projects = [
   {
     id: 1,
-    title: 'Egyptian E-commerce Platform',
-    category: 'E-commerce',
-    description: '300% increase in mobile conversions with Paymob integration',
-    image: '/images/portfolio/ecommerce-eg.jpg',
-    tags: ['Next.js', 'E-commerce', 'Paymob'],
-    href: '/portfolio/egyptian-ecommerce'
+    title: 'TechBytes',
+    category: 'Websites',
+    description: 'Modern tech blog with 5,000+ monthly readers and fast loading times',
+    image: '/portfolio/techbytes.jpg',
+    tags: ['Next.js', 'Blog', 'SEO'],
+    client: 'Ahmed Younes',
+    href: '/portfolio/techbytes'
   },
   {
     id: 2,
-    title: 'Cairo Restaurant Chain App',
+    title: 'Ascension',
     category: 'Mobile Apps',
-    description: 'iOS & Android app serving 10K+ daily orders across Cairo',
-    image: '/images/portfolio/restaurant-app.jpg',
-    tags: ['React Native', 'iOS', 'Android'],
-    href: '/portfolio/restaurant-app'
+    description: 'Coaching app with 500+ active clients and 4.8/5 rating',
+    image: '/portfolio/ascension.jpg',
+    tags: ['React Native', 'Coaching', 'Firebase'],
+    client: 'Coach & Dr.M3ta',
+    href: '/portfolio/ascension'
   },
   {
     id: 3,
-    title: 'Alexandria Medical Portal',
-    category: 'Corporate',
-    description: 'Patient portal connecting 15+ clinics with 5K+ users',
-    image: '/images/portfolio/medical-portal.jpg',
-    tags: ['Healthcare', 'Portal', 'Secure'],
-    href: '/portfolio/medical-portal'
+    title: 'Boxeo',
+    category: 'Mobile Apps',
+    description: 'Boxing training app with 1,000+ downloads and video tutorials',
+    image: '/portfolio/boxeo.jpg',
+    tags: ['Flutter', 'Training', 'Video'],
+    client: 'Coach Omar Mohamed',
+    href: '/portfolio/boxeo'
   },
   {
     id: 4,
-    title: 'Shipping Automation System',
-    category: 'Automation',
-    description: '80% reduction in manual work for logistics company',
-    image: '/images/portfolio/shipping-auto.jpg',
-    tags: ['Automation', 'API', 'Logistics'],
-    href: '/portfolio/shipping-automation'
+    title: 'Airpods4U',
+    category: 'E-commerce',
+    description: 'Premium e-commerce with 10,000+ monthly visitors',
+    image: '/portfolio/airpods4u.jpg',
+    tags: ['E-commerce', 'Paymob', 'Next.js'],
+    client: 'E-commerce Business',
+    href: '/portfolio/airpods4u'
+  },
+  {
+    id: 5,
+    title: 'Untitled Academy',
+    category: 'Websites',
+    description: 'Educational platform with 500+ students and 95% completion rate',
+    image: '/portfolio/untitled.jpg',
+    tags: ['Education', 'Portal', 'React'],
+    client: 'Untitled Academy',
+    href: '/portfolio/untitled-academy'
   }
 ]
 
@@ -88,32 +103,41 @@ const FeaturedPortfolio = () => {
               href={project.href}
               className="group bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-medium transition-all"
             >
-              {/* Image Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                  <div className="text-center p-6">
-                    <div className="text-4xl mb-2">🎨</div>
-                    <div className="text-sm">{project.title}</div>
-                  </div>
-                </div>
+              {/* Project Image */}
+              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                <Image 
+                  src={project.image} 
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full font-medium">
+                    {project.category}
+                  </span>
+                  {project.tags.slice(0, 2).map((tag, idx) => (
+                    <span key={idx} className="text-sm text-gray-500">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="flex items-center text-primary font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                  View Case Study <FaArrowRight className="ml-2 text-xs" />
+                {project.client && (
+                  <p className="text-sm text-accent font-medium mb-2">
+                    Client: {project.client}
+                  </p>
+                )}
+                <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
+                <div className="flex items-center text-accent font-medium">
+                  <span>View Case Study</span>
+                  <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>

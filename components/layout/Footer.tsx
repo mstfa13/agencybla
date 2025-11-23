@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <Image 
-                src="/fikra-logo.png" 
+                src="/fikra-logo.jpg" 
                 alt="Fikra Agency Logo" 
                 width={40} 
                 height={40}
@@ -37,16 +37,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-3">
               <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                aria-label="Facebook"
-              >
-                <FaFacebookF className="text-sm" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/fikrax" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center hover:bg-accent transition-colors"
@@ -55,22 +46,13 @@ const Footer = () => {
                 <FaLinkedinIn className="text-sm" />
               </a>
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/fikrax.agency/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center hover:bg-accent transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-sm" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary-light rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-sm" />
               </a>
             </div>
           </div>

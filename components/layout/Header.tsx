@@ -17,7 +17,7 @@ const Header = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
               <Image 
-                src="/fikra-logo.png" 
+                src="/fikra-logo.jpg" 
                 alt="Fikra Agency Logo" 
                 width={50} 
                 height={50}

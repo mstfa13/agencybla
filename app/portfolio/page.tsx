@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 
 export const metadata: Metadata = {
@@ -12,92 +13,70 @@ const categories = ['All', 'Websites & Apps', 'Mobile Apps', 'IT Consulting', 'A
 
 const projects = [
   {
-    id: 'ecommerce-fashion',
-    title: 'Fashion E-commerce Platform',
+    id: 'techbytes',
+    title: 'TechBytes',
     category: 'Websites & Apps',
-    image: '🛍️',
-    client: 'Fashion Retail Company, Cairo',
-    description: 'Complete e-commerce solution with inventory management, Paymob integration, and mobile app.',
-    results: ['300% increase in online sales', '10,000+ monthly visitors', '4.8/5 customer rating'],
-    tech: ['Next.js', 'Node.js', 'MongoDB', 'React Native'],
-    link: '/portfolio/ecommerce-fashion'
+    image: '/portfolio/techbytes.jpg',
+    client: 'Ahmed Younes',
+    description: 'Modern tech blog and content platform with custom CMS, SEO optimization, and responsive design.',
+    results: ['5,000+ monthly readers', 'Fast loading times', 'Mobile-optimized reading experience'],
+    tech: ['Next.js', 'Tailwind CSS', 'MDX', 'Vercel'],
+    link: '/portfolio/techbytes'
   },
   {
-    id: 'delivery-app',
-    title: 'Food Delivery Mobile App',
+    id: 'ascension',
+    title: 'Ascension',
     category: 'Mobile Apps',
-    image: '🍕',
-    client: 'Restaurant Chain, Alexandria',
-    description: 'iOS & Android app for food ordering with real-time tracking and multi-payment options.',
-    results: ['5,000+ downloads in 3 months', '500+ daily orders', '4.6/5 app rating'],
-    tech: ['React Native', 'Firebase', 'Google Maps API'],
-    link: '/portfolio/delivery-app'
+    image: '/portfolio/ascension.jpg',
+    client: 'Coach & Dr.M3ta',
+    description: 'Comprehensive coaching app with progress tracking, personalized plans, and client communication features.',
+    results: ['500+ active clients', '4.8/5 app rating', 'Improved client engagement by 200%'],
+    tech: ['React Native', 'Firebase', 'Push Notifications'],
+    link: '/portfolio/ascension'
+  },
+  {
+    id: 'boxeo',
+    title: 'Boxeo',
+    category: 'Mobile Apps',
+    image: '/portfolio/boxeo.jpg',
+    client: 'Coach Omar Mohamed',
+    description: 'Boxing training app with workout routines, video tutorials, and performance analytics.',
+    results: ['1,000+ downloads', 'Featured workouts', '4.7/5 user rating'],
+    tech: ['Flutter', 'Video Streaming', 'Analytics Dashboard'],
+    link: '/portfolio/boxeo'
+  },
+  {
+    id: 'airpods4u',
+    title: 'Airpods4U',
+    category: 'Websites & Apps',
+    image: '/portfolio/airpods4u.jpg',
+    client: 'E-commerce Business',
+    description: 'Premium e-commerce platform for audio products with Paymob integration and inventory management.',
+    results: ['10,000+ monthly visitors', '300+ orders/month', 'Seamless payment experience'],
+    tech: ['Next.js', 'Paymob', 'MongoDB', 'Stripe'],
+    link: '/portfolio/airpods4u'
+  },
+  {
+    id: 'untitled-academy',
+    title: 'Untitled',
+    category: 'Websites & Apps',
+    image: '/portfolio/untitled.jpg',
+    client: 'Untitled Academy',
+    description: 'Modern educational platform with course management, student portal, and online learning features.',
+    results: ['500+ enrolled students', 'Interactive learning experience', '95% completion rate'],
+    tech: ['Next.js', 'React', 'Video Platform', 'Student Dashboard'],
+    link: '/portfolio/untitled-academy'
   },
   {
     id: 'automation-system',
     title: 'Sales Automation System',
     category: 'Automation',
-    image: '⚡',
+    image: '/portfolio/automation.jpg',
     client: 'Tech Company, Cairo',
     description: 'Automated lead management, email campaigns, and reporting dashboard.',
     results: ['70% time saved on manual tasks', '150+ leads per week', '35% increase in conversions'],
     tech: ['Zapier', 'HubSpot API', 'Custom Dashboard'],
     link: '/portfolio/automation-system'
-  },
-  {
-    id: 'cloud-migration',
-    title: 'Cloud Infrastructure Migration',
-    category: 'IT Consulting',
-    image: '☁️',
-    client: 'Financial Services, Egypt',
-    description: 'Complete migration from on-premise to AWS cloud with zero downtime.',
-    results: ['50% reduction in infrastructure costs', '99.9% uptime achieved', 'Zero downtime during migration'],
-    tech: ['AWS EC2', 'RDS', 'S3', 'CloudFront'],
-    link: '/portfolio/cloud-migration'
-  },
-  {
-    id: 'brand-identity',
-    title: 'Complete Brand Identity',
-    category: 'Design',
-    image: '🎨',
-    client: 'Startup, Cairo',
-    description: 'Logo, brand guidelines, website design, and marketing materials.',
-    results: ['Increased brand recognition by 200%', 'Consistent brand across all channels', 'Professional market presence'],
-    tech: ['Adobe Illustrator', 'Figma', 'Photoshop'],
-    link: '/portfolio/brand-identity'
-  },
-  {
-    id: 'corporate-video',
-    title: 'Corporate Video Campaign',
-    category: 'Video',
-    image: '🎬',
-    client: 'Real Estate Company, Egypt',
-    description: 'Series of property showcase videos and company profile video.',
-    results: ['1M+ views across platforms', '200% increase in inquiries', '50+ properties sold'],
-    tech: ['4K Video', 'Drone Footage', 'Motion Graphics'],
-    link: '/portfolio/corporate-video'
-  },
-  {
-    id: 'healthcare-app',
-    title: 'Healthcare Appointment App',
-    category: 'Mobile Apps',
-    image: '🏥',
-    client: 'Medical Center, Cairo',
-    description: 'Patient appointment booking, medical records, and telemedicine features.',
-    results: ['3,000+ registered patients', '80% reduction in phone bookings', '4.7/5 patient satisfaction'],
-    tech: ['Flutter', 'Firebase', 'WebRTC'],
-    link: '/portfolio/healthcare-app'
-  },
-  {
-    id: 'booking-platform',
-    title: 'Hotel Booking Platform',
-    category: 'Websites & Apps',
-    image: '🏨',
-    client: 'Hospitality Group, Egypt',
-    description: 'Multi-property booking system with channel manager integration.',
-    results: ['1,000+ bookings per month', '30% direct booking increase', 'Integration with 5+ OTAs'],
-    tech: ['Next.js', 'PostgreSQL', 'Stripe', 'Booking.com API'],
-    link: '/portfolio/booking-platform'
   }
 ]
 
@@ -122,12 +101,17 @@ export default function PortfolioPage() {
                 href={project.link}
                 className="group bg-white rounded-xl shadow-soft overflow-hidden hover:shadow-lg transition-all"
               >
-                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-6xl">
-                  {project.image}
+                <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-primary font-semibold mb-2">{project.category}</div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                  <div className="text-sm text-accent font-semibold mb-2">{project.category}</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
                   <p className="text-sm text-gray-500 mb-3">{project.client}</p>
                   <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>
                   
@@ -140,7 +124,7 @@ export default function PortfolioPage() {
                     ))}
                   </div>
 
-                  <div className="flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
+                  <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
                     View Case Study <FaArrowRight className="ml-1 group-hover:ml-0" />
                   </div>
                 </div>
