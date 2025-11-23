@@ -6,39 +6,48 @@ import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/
 const testimonials = [
   {
     id: 1,
-    name: 'Ahmed Hassan',
-    company: 'Cairo E-commerce',
-    role: 'CEO',
+    name: 'Ahmed Younes',
+    company: 'TechBytes',
+    role: 'Founder & Editor',
     rating: 5,
-    text: 'Working with this team transformed our online business. Our mobile sales increased by 300% within 3 months. They understood the Egyptian market perfectly and delivered beyond our expectations.',
-    avatar: 'AH'
+    text: 'Fikra delivered a blazing-fast tech blog that transformed my content platform. Our website improved traffic conversion by 55% within the first quarter. The SEO optimization and Next.js performance are exceptional.',
+    avatar: 'AY'
   },
   {
     id: 2,
-    name: 'Sarah Mohamed',
-    company: 'Alexandria Medical Group',
-    role: 'Operations Manager',
+    name: 'Coach & Dr.M3ta',
+    company: 'Ascension',
+    role: 'Fitness Coach',
     rating: 5,
-    text: 'The patient portal they built for us is exceptional. It handles 5,000+ users seamlessly and our staff loves how easy it is to use. Great communication throughout the project.',
-    avatar: 'SM'
+    text: 'The Ascension coaching app exceeded all expectations. Fikra maximized the amount of clients I can manage at the same time by reducing the management and manual labour. Now I handle 500+ clients seamlessly with a 4.8/5 app rating!',
+    avatar: 'M3'
   },
   {
     id: 3,
-    name: 'Karim Ibrahim',
-    company: 'Giza Logistics',
-    role: 'Director',
+    name: 'Coach Omar Mohamed',
+    company: 'Boxeo',
+    role: 'Boxing Coach',
     rating: 5,
-    text: 'Their automation solution saved us 80% of manual data entry time. ROI was achieved in just 4 months. Professional, responsive, and delivered exactly what we needed.',
-    avatar: 'KI'
+    text: 'My boxing training app hit 1,000+ downloads faster than expected. The video tutorials integration is smooth and athletes find it incredibly intuitive. Fikra truly understood my vision and delivered perfectly.',
+    avatar: 'OM'
   },
   {
     id: 4,
-    name: 'Mona Ali',
-    company: 'Nile Restaurant Chain',
+    name: 'E-commerce Business Owner',
+    company: 'Airpods4U',
     role: 'Owner',
     rating: 5,
-    text: 'The mobile app they developed handles 10,000+ daily orders across our locations. The Paymob and Fawry integration works flawlessly. Couldn\'t be happier with the results.',
-    avatar: 'MA'
+    text: 'Our premium e-commerce site now handles 10,000+ monthly visitors effortlessly. The Paymob integration and checkout flow are flawless. Sales increased by 250% since launch. Best investment we made!',
+    avatar: 'A4'
+  },
+  {
+    id: 5,
+    name: 'Untitled Academy',
+    company: 'Untitled Academy',
+    role: 'Director',
+    rating: 5,
+    text: 'Our educational platform serves 500+ students with a 95% completion rate. The learning management features are intuitive and students love the experience. Professional team, excellent results.',
+    avatar: 'UA'
   }
 ]
 
