@@ -9,7 +9,7 @@ const StickyBottomBar = () => {
       <div className="grid grid-cols-3 gap-1 p-2">
         {/* Call Button */}
         <a
-          href="tel:+201234567890"
+          href="tel:+201557525158"
           className="flex flex-col items-center justify-center py-2 px-3 bg-success text-white rounded-lg hover:bg-opacity-90 transition-all touch-target"
         >
           <FaPhone className="text-lg mb-1" />
@@ -18,7 +18,7 @@ const StickyBottomBar = () => {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/201234567890"
+          href="https://wa.me/201557525158"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-3 bg-[#25D366] text-white rounded-lg hover:bg-opacity-90 transition-all touch-target"

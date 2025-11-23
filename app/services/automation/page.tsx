@@ -283,7 +283,7 @@ export default function AutomationPage() {
               <FaArrowRight className="ml-2" />
             </Link>
             <a 
-              href="https://wa.me/201234567890"
+              href="https://wa.me/201557525158"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] text-white rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-lg"

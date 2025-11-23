@@ -131,8 +131,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="text-accent flex-shrink-0" />
-                <a href="tel:+201234567890" className="hover:text-accent-light transition-colors">
-                  +20 123 456 7890
+                <a href="tel:+201557525158" className="hover:text-accent-light transition-colors">
+                  +20 15 5752 5158
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -154,10 +154,10 @@ const Footer = () => {
               © {currentYear} Fikra Agency. All rights reserved. 💡
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="hover:text-accent transition-colors">
+              <Link href="/privacy-policy" className="hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link href="/terms-of-service" className="hover:text-accent transition-colors">
                 Terms of Service
               </Link>
             </div>

@@ -146,11 +146,11 @@ export default function ContactPage() {
               <div className="bg-white p-6 rounded-xl shadow-soft">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
                 <div className="space-y-4">
-                  <a href="tel:+201234567890" className="flex items-start hover:text-primary transition-colors">
+                  <a href="tel:+201557525158" className="flex items-start hover:text-primary transition-colors">
                     <FaPhone className="mr-3 mt-1 text-primary flex-shrink-0" />
                     <div>
                       <div className="font-semibold">Phone</div>
-                      <div className="text-gray-600">+20 10 1234 5678</div>
+                      <div className="text-gray-600">+20 15 5752 5158</div>
                     </div>
                   </a>
                   <a href="mailto:info@example.com" className="flex items-start hover:text-primary transition-colors">
@@ -190,7 +190,7 @@ export default function ContactPage() {
                   Get instant responses on WhatsApp. We're usually online during business hours!
                 </p>
                 <a 
-                  href="https://wa.me/201234567890" 
+                  href="https://wa.me/201557525158" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center px-6 py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 transition-all"
@@ -202,14 +202,11 @@ export default function ContactPage() {
               <div className="bg-white p-6 rounded-xl shadow-soft">
                 <h3 className="text-xl font-semibold mb-6">Follow Us</h3>
                 <div className="flex gap-4">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#1877F2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-all">
-                    <FaFacebook className="text-xl" />
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-full flex items-center justify-center hover:opacity-80 transition-all">
-                    <FaInstagram className="text-xl" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-all">
+                  <a href="https://www.linkedin.com/company/fikrax" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#0A66C2] text-white rounded-full flex items-center justify-center hover:opacity-80 transition-all">
                     <FaLinkedin className="text-xl" />
+                  </a>
+                  <a href="https://www.instagram.com/fikrax.agency/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-full flex items-center justify-center hover:opacity-80 transition-all">
+                    <FaInstagram className="text-xl" />
                   </a>
                 </div>
               </div>

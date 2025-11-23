@@ -30,14 +30,14 @@ const CTASection = () => {
               <FaArrowRight className="ml-2" />
             </Link>
             <a 
-              href="tel:+201234567890"
+              href="tel:+201557525158"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/20 touch-target"
             >
               <FaPhone className="mr-2" />
               Call Now
             </a>
             <a 
-              href="https://wa.me/201234567890"
+              href="https://wa.me/201557525158"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-[#25D366] text-white rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-lg hover:shadow-xl touch-target"
