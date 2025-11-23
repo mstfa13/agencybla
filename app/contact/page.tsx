@@ -22,28 +22,37 @@ export default function ContactPage() {
     setSubmitStatus('idle')
 
     try {
+      // Create form data for submission
+      const submitData = new URLSearchParams()
+      submitData.append('name', formData.name)
+      submitData.append('email', formData.email)
+      submitData.append('phone', formData.phone)
+      submitData.append('service', formData.service)
+      submitData.append('message', formData.message)
+      submitData.append('formType', 'Contact Form')
+
       const response = await fetch('https://script.google.com/macros/s/AKfycbx5wfIHBNKGs3QkixnR6hxMobgXsp5Sz-fNk-FKOleENnboDhBNyAYnxU1WZQT_fi1ipA/exec', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          formType: 'Contact Form'
-        })
+        body: submitData
       })
 
-      setSubmitStatus('success')
-      setShowSuccessModal(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      })
+      const result = await response.json()
+      
+      if (result.status === 'success' || response.ok) {
+        setSubmitStatus('success')
+        setShowSuccessModal(true)
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        })
+      } else {
+        throw new Error('Submission failed')
+      }
     } catch (error) {
+      console.error('Form submission error:', error)
       setSubmitStatus('error')
       alert('There was an error submitting your form. Please try again or contact us directly via WhatsApp.')
     } finally {
