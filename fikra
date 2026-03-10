@@ -432,7 +432,7 @@
     gap: 0;
     border: 1px solid var(--border);
   }
-
+ 
   .step {
     padding: 48px 36px;
     border-right: 1px solid var(--border);
